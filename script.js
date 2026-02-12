@@ -1,6 +1,6 @@
 // PASSWORD
 function checkPassword() {
-  const correctPassword = "02122022"; // CHANGE THIS
+  const correctPassword = "02122022";
   const input = document.getElementById("passwordInput").value;
 
   if (input === correctPassword) {
@@ -30,26 +30,11 @@ setInterval(function() {
 let currentQuestion = 0;
 
 const questions = [
-  {
-    question: "When did we first meet? ✨",
-    answers: ["Destiny 😌", "Best Day Ever ❤️"]
-  },
-  {
-    question: "Who loves more? 💕",
-    answers: ["Me 😎", "You 😘"]
-  },
-  {
-    question: "Our dream vacation? 🌍",
-    answers: ["Goa 🌊", "Paris 🗼"]
-  },
-  {
-    question: "You are my...? 💖",
-    answers: ["Peace ☁️", "Forever ♾️"]
-  },
-  {
-    question: "Will you be my Valentine forever? 💍",
-    answers: ["YES ❤️", "YES FOREVER 💕"]
-  }
+  { question: "When did we first meet? ✨", answers: ["Destiny 😌", "Best Day Ever ❤️"] },
+  { question: "Who loves more? 💕", answers: ["Me 😎", "You 😘"] },
+  { question: "Our dream vacation? 🌍", answers: ["Goa 🌊", "Paris 🗼"] },
+  { question: "You are my...? 💖", answers: ["Peace ☁️", "Forever ♾️"] },
+  { question: "Will you be my Valentine forever? 💍", answers: ["YES ❤️", "YES FOREVER 💕"] }
 ];
 
 function nextQuestion() {
@@ -70,7 +55,6 @@ function nextQuestion() {
 function handleAnswer() {
   if (currentQuestion === questions.length) {
 
-    // CONFETTI BLAST
     confetti({
       particleCount: 200,
       spread: 120,
@@ -93,7 +77,7 @@ function createHearts() {
   heart.innerHTML = "💘";
   heart.style.left = Math.random() * 100 + "vw";
   heart.style.animationDuration = Math.random() * 3 + 3 + "s";
-  document.querySelector(".hearts").appendChild(heart);
+  document.body.appendChild(heart);
 
   setTimeout(() => {
     heart.remove();
