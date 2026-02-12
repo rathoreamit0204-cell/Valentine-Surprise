@@ -1,18 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>For You ❤️</title>
+  <title>Only For You ❤️</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body class="question-page">
-<div class="question-container">
-  <h1 id="question">Ready for a little surprise? 💌</h1>
 
-  <div id="answers">
-    <button onclick="nextQuestion()">Start ❤️</button>
-  </div>
+<!-- Floating Hearts -->
+<div class="hearts"></div>
+
+<!-- Background Music -->
+<audio id="bgMusic" src="music.mp3" loop></audio>
+
+<!-- Password Screen -->
+<div id="passwordScreen" class="center-screen">
+  <h2>Enter Our Secret Password 🔐</h2>
+  <input type="password" id="passwordInput" placeholder="Hint: Our Special Date">
+  <button onclick="checkPassword()">Unlock ❤️</button>
 </div>
+
+<!-- Main Content Hidden Initially -->
+<div id="mainContent" style="display:none;">
+
+  <div class="countdown">
+    <h3>Countdown to Valentine's Day ⏳</h3>
+    <p id="timer"></p>
+  </div>
+
+  <div class="question-container">
+    <h1 id="question">Ready for something special? 💌</h1>
+    <div id="answers">
+      <button onclick="nextQuestion()">Start ❤️</button>
+    </div>
+  </div>
+
+</div>
+
 <script src="script.js"></script>
 </body>
 </html>
