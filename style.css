@@ -1,13 +1,13 @@
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
   background: red;
   color: white;
+  font-family: Arial;
   text-align: center;
   overflow-x: hidden;
 }
 
-.center-screen {
+.center {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -18,7 +18,6 @@ input {
   padding: 10px;
   border-radius: 20px;
   border: none;
-  margin: 10px;
 }
 
 button {
@@ -29,8 +28,6 @@ button {
   color: white;
   border-radius: 30px;
   cursor: pointer;
-  font-size: 16px;
-  transition: 0.3s;
 }
 
 button:hover {
@@ -38,25 +35,6 @@ button:hover {
   transform: scale(1.1);
 }
 
-.countdown {
-  margin-top: 20px;
-  font-size: 20px;
-}
-
-.heart {
-  position: fixed;
-  top: -10px;
-  font-size: 24px;
-  animation: fall linear forwards;
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(100vh);
-  }
-}
-
-/* NAV */
 nav {
   padding: 15px;
   background: #111;
@@ -68,7 +46,6 @@ nav a {
   text-decoration: none;
 }
 
-/* HERO */
 .hero {
   position: relative;
   height: 90vh;
@@ -85,4 +62,15 @@ nav a {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.heart {
+  position: fixed;
+  top: -10px;
+  font-size: 24px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to { transform: translateY(100vh); }
 }
