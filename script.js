@@ -44,7 +44,7 @@ const questions = [
   },
   {
     question: "Our dream vacation? 🌍",
-    answers: ["Greece 🇬🇷", "Paris 🇫🇷"]
+    answers: ["Greece", "Paris"]
   },
   {
     question: "You are my...? 🌎",
