@@ -1,23 +1,18 @@
-/* Reset */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: white;
   text-align: center;
   overflow-x: hidden;
 }
 
-/* ===== BANNER BACKGROUND FOR INDEX PAGE ===== */
+/* ===== Banner Background ===== */
 .banner-bg {
-  background-image: url("banner.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url("banner.jpg") center center/cover no-repeat;
   min-height: 100vh;
   position: relative;
 }
 
-/* Dark overlay */
 .banner-bg::after {
   content: "";
   position: fixed;
@@ -29,36 +24,38 @@ body {
   z-index: -1;
 }
 
-/* Center content */
+/* Center */
 .center {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
-  z-index: 2;
 }
 
 /* Input */
 input {
-  padding: 12px;
-  border-radius: 25px;
-  border: none;
   width: 60%;
   max-width: 400px;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
   margin: 10px auto;
   display: block;
 }
 
-/* Button */
+/* Buttons */
 button {
-  padding: 12px 30px;
+  width: 60%;
+  max-width: 400px;
+  padding: 14px;
+  border-radius: 30px;
   border: none;
-  border-radius: 25px;
   background: #ff2e63;
   color: white;
-  cursor: pointer;
+  font-weight: 700;
   font-size: 16px;
+  margin: 10px auto;
+  cursor: pointer;
   transition: 0.3s;
 }
 
@@ -67,36 +64,15 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* Navigation */
-nav {
-  background: #000;
-  padding: 15px;
-}
-
-nav a {
-  color: #ff2e63;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Hero Section for home page */
-.hero-section {
-  height: 100vh;
-  background: url("hero.jpg") center center/cover no-repeat;
+/* Question Section */
+#answers {
   display: flex;
   justify-content: center;
-  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.hero-section h1 {
-  font-size: 60px;
-  background: rgba(0,0,0,0.5);
-  padding: 20px 40px;
-  border-radius: 15px;
-}
-
-/* Floating hearts */
+/* Floating Hearts */
 .heart {
   position: fixed;
   top: -10px;
@@ -108,4 +84,37 @@ nav a {
   to {
     transform: translateY(100vh);
   }
+}
+
+/* Home Page */
+.hero-home {
+  height: 100vh;
+  background: url("hero.jpg") center center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.beginning-section {
+  min-height: 100vh;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.small-photo {
+  width: 200px;
+  border-radius: 15px;
+  margin-top: 20px;
 }
