@@ -1,31 +1,43 @@
-<body class="index-bg">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Only For You ❤️</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
 
-<div class="hearts"></div>
+<body>
 
 <!-- Background Music -->
-<audio id="bgMusic" src="music.mp3" loop autoplay></audio>
+<audio id="bgMusic" src="music.mp3" loop></audio>
 
-<!-- PASSWORD SCREEN -->
-<div id="passwordScreen" class="password-wrapper">
-  <h2>Enter Our Secret Password 🔐</h2>
-  <input type="password" id="passwordInput" placeholder="Our Special Date">
-  <button onclick="checkPassword()">Unlock 💖</button>
-</div>
+<div class="page">
 
-<!-- MAIN CONTENT -->
-<div id="mainContent" style="display:none;">
-
-  <div class="countdown">
-    <h3>Countdown to Valentine's Day ⏳</h3>
-    <p id="timer"></p>
+  <!-- PASSWORD -->
+  <div id="passwordScreen" class="password-box">
+    <h2>Enter Our Secret Password 🔐</h2>
+    <input type="password" id="passwordInput" placeholder="Our Special Date">
+    <button onclick="checkPassword()">Unlock 💖</button>
   </div>
 
-  <div class="question-wrapper">
-    <h1 id="question"></h1>
-    <div id="answers"></div>
+  <!-- MAIN -->
+  <div id="mainContent" class="hidden">
+
+    <div class="countdown">
+      <h3>Countdown to Valentine's Day ⏳</h3>
+      <p id="timer"></p>
+    </div>
+
+    <div class="question-box">
+      <h1 id="question"></h1>
+      <div id="answers"></div>
+    </div>
+
   </div>
 
 </div>
 
 <script src="script.js"></script>
 </body>
+</html>
