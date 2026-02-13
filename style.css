@@ -6,9 +6,12 @@ body {
 
 /* FIRST SCREEN */
 .hero-screen {
-  position: relative;
   height: 100vh;
-  background: url("bg1.jpg") center center/cover no-repeat;
+  background-image: url("bg1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +23,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0,0,0,0.5);
   top: 0;
   left: 0;
 }
@@ -32,7 +35,6 @@ body {
 
 .hero-content h1 {
   font-size: 60px;
-  margin-bottom: 20px;
 }
 
 .hero-content p {
@@ -56,19 +58,16 @@ button {
   font-weight: 600;
   font-size: 18px;
   cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background: #ff005c;
-  transform: scale(1.05);
 }
 
 /* SECOND SCREEN */
 .second-screen {
-  position: relative;
   height: 100vh;
-  background: url("bg2.jpg") center center/cover no-repeat;
+  background-image: url("bg2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,10 +80,4 @@ button:hover {
   z-index: 2;
   max-width: 800px;
   padding: 20px;
-}
-
-.second-content h2 {
-  font-weight: 500;
-  line-height: 1.8;
-  font-size: 26px;
 }
