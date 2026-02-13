@@ -4,7 +4,57 @@ body {
   overflow-x: hidden;
 }
 
-/* COMMON FULL SCREEN SETTINGS */
+/* ================= PASSWORD PAGE ================= */
+
+.banner-bg {
+  background: url("banner.jpg") center center/cover no-repeat;
+  min-height: 100vh;
+  position: relative;
+  color: white;
+}
+
+.center {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50px;
+}
+
+input {
+  width: 300px;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+}
+
+button {
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+  background: #ff2e63;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Floating Hearts */
+.heart {
+  position: fixed;
+  top: -10px;
+  font-size: 24px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+/* ================= HOME PAGE ================= */
+
 .hero-screen,
 .second-screen {
   height: 100vh;
@@ -15,17 +65,14 @@ body {
   color: white;
 }
 
-/* First Background */
 .hero-screen {
   background-image: url("bg1.jpg");
 }
 
-/* Second Background */
 .second-screen {
   background-image: url("bg2.jpg");
 }
 
-/* Dark Overlay */
 .overlay {
   position: absolute;
   width: 100%;
@@ -35,11 +82,10 @@ body {
   left: 0;
 }
 
-/* TEXT AT TOP FOR BOTH SCREENS */
 .hero-content,
 .second-content {
   position: absolute;
-  top: 80px;      /* Adjust top spacing here */
+  top: 80px;
   width: 100%;
   text-align: center;
   z-index: 2;
@@ -48,7 +94,6 @@ body {
 
 .hero-content h1 {
   font-size: 60px;
-  margin-bottom: 20px;
 }
 
 .hero-content p {
@@ -58,31 +103,12 @@ body {
 .second-content h2 {
   font-size: 28px;
   line-height: 1.8;
-  font-weight: 500;
 }
 
-/* Bottom Button */
 .bottom-button {
   position: absolute;
   bottom: 50px;
   width: 100%;
   text-align: center;
   z-index: 2;
-}
-
-button {
-  padding: 15px 40px;
-  border-radius: 40px;
-  border: none;
-  background: #ff2e63;
-  color: white;
-  font-weight: 600;
-  font-size: 18px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background: #ff005c;
-  transform: scale(1.05);
 }
