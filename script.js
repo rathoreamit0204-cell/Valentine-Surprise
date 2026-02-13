@@ -1,4 +1,3 @@
-// PASSWORD
 function checkPassword() {
   const correctPassword = "02122022";
   const input = document.getElementById("passwordInput").value;
@@ -6,6 +5,9 @@ function checkPassword() {
   if (input === correctPassword) {
     document.getElementById("passwordScreen").style.display = "none";
     document.getElementById("mainContent").style.display = "block";
+
+    const music = document.getElementById("bgMusic");
+    music.play().catch(() => {});
   } else {
     alert("Wrong password 😜 Try again!");
   }
