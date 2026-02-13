@@ -169,3 +169,69 @@ html {
     font-size: 16px;
   }
 }
+/* SECTION THREE */
+
+.section-three {
+  background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+  padding-top: 100px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+.card {
+  width: 240px;
+  padding: 25px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 18px;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card.active {
+  background: #ff2e63;
+  box-shadow: 0 0 20px rgba(255, 46, 99, 0.7);
+}
+
+.card .message {
+  display: none;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.card.active .message {
+  display: block;
+}
+
+.generated-message {
+  margin-top: 40px;
+  font-size: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.confirm-box {
+  margin-top: 30px;
+}
+
+.final-line {
+  margin-top: 25px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #ff2e63;
+}
