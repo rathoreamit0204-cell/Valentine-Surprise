@@ -1,21 +1,24 @@
+/* ================= GLOBAL ================= */
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
+  color: white;
 }
 
 /* ================= PASSWORD PAGE ================= */
 
 .banner-bg {
-  background-image: url("banner.jpg"); /* password page background */
+  background-image: url("banner.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
   position: relative;
-  color: white;
 }
 
+/* Center password section */
 .center {
   position: absolute;
   top: 50%;
@@ -25,15 +28,19 @@ body {
 
 .center h2 {
   font-size: 32px;
+  margin-bottom: 15px;
 }
 
+/* Password input */
 input {
   width: 300px;
   padding: 12px;
   border-radius: 25px;
   border: none;
-  margin-top: 10px;
+  outline: none;
 }
+
+/* ================= BUTTONS ================= */
 
 button {
   padding: 12px 30px;
@@ -44,9 +51,65 @@ button {
   font-weight: 600;
   cursor: pointer;
   margin-top: 10px;
+  transition: 0.3s;
 }
 
-/* Floating Hearts */
+button:hover {
+  background: #ff005c;
+  transform: scale(1.05);
+}
+
+/* ================= COUNTDOWN ================= */
+
+.countdown-title,
+#timer {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-weight: 600;
+}
+
+/* ================= QUESTION SCREEN ================= */
+
+#mainContent {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* vertical center */
+  align-items: center;       /* horizontal center */
+  text-align: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+/* Question text */
+#question {
+  font-size: 44px;
+  max-width: 900px;
+  margin-bottom: 40px;
+}
+
+/* Answer buttons container */
+#answers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;              /* space between buttons */
+  flex-wrap: wrap;
+}
+
+/* Answer buttons */
+#answers button {
+  padding: 14px 30px;
+  border-radius: 40px;
+  min-width: 260px;
+  font-size: 16px;
+}
+
+/* ================= FLOATING HEARTS ================= */
+
 .heart {
   position: fixed;
   top: -10px;
@@ -80,6 +143,7 @@ button {
   background-image: url("bg2.jpg");
 }
 
+/* Overlay */
 .overlay {
   position: absolute;
   width: 100%;
@@ -89,6 +153,7 @@ button {
   left: 0;
 }
 
+/* Top text for both screens */
 .hero-content,
 .second-content {
   position: absolute;
@@ -96,10 +161,12 @@ button {
   width: 100%;
   text-align: center;
   z-index: 2;
+  padding: 0 20px;
 }
 
 .hero-content h1 {
   font-size: 60px;
+  margin-bottom: 20px;
 }
 
 .hero-content p {
@@ -109,8 +176,10 @@ button {
 .second-content h2 {
   font-size: 28px;
   line-height: 1.8;
+  font-weight: 500;
 }
 
+/* Bottom button on first home screen */
 .bottom-button {
   position: absolute;
   bottom: 50px;
