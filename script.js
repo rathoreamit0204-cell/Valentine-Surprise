@@ -108,3 +108,11 @@ setInterval(createHearts, 300);
   position: relative;
   z-index: 2;
 }
+.banner-bg {
+  animation: zoomEffect 20s infinite alternate;
+}
+
+@keyframes zoomEffect {
+  from { background-size: 100%; }
+  to { background-size: 110%; }
+}
