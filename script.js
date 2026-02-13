@@ -84,35 +84,3 @@ function createHearts() {
   }, 6000);
 }
 setInterval(createHearts, 300);
-/* Banner Background for Opening Screen */
-.banner-bg {
-  background: url('banner.jpg') no-repeat center center fixed;
-  background-size: cover;
-  position: relative;
-}
-
-/* Dark overlay effect */
-.banner-bg::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: -1;
-}
-
-/* Improve password box visibility */
-.center {
-  position: relative;
-  z-index: 2;
-}
-.banner-bg {
-  animation: zoomEffect 20s infinite alternate;
-}
-
-@keyframes zoomEffect {
-  from { background-size: 100%; }
-  to { background-size: 110%; }
-}
