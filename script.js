@@ -6,7 +6,6 @@ function checkPassword() {
   if (input === correctPassword) {
     document.getElementById("passwordScreen").style.display = "none";
     document.getElementById("mainContent").style.display = "block";
-    document.getElementById("bgMusic").play();
   } else {
     alert("Wrong password 😜 Try again!");
   }
@@ -30,31 +29,45 @@ setInterval(function() {
 let currentQuestion = 0;
 
 const questions = [
-  { question: "When did we first meet? ✨", answers: ["Destiny 😌", "Best Day Ever ❤️"] },
-  { question: "Who loves more? 💕", answers: ["Me 😎", "You 😘"] },
-  { question: "Our dream vacation? 🌍", answers: ["Goa 🌊", "Paris 🗼"] },
-  { question: "You are my...? 💖", answers: ["Peace ☁️", "Forever ♾️"] },
-  { question: "Will you be my Valentine forever? 💍", answers: ["YES ❤️", "YES FOREVER 💕"] }
+  {
+    question: "If we were characters in a romantic series, who would we be? 🎬",
+    answers: [
+      "Dhruv-Kavya (Little Things)",
+      "Rishi-Dimple (Mismatched)"
+    ]
+  },
+  {
+    question: "Who loves more? 💕",
+    answers: ["Me 😎", "You 😘"]
+  },
+  {
+    question: "Our dream vacation? 🌍",
+    answers: ["Greece 🇬🇷", "Paris 🇫🇷"]
+  },
+  {
+    question: "You are my...? 🌎",
+    answers: ["World 🌍", "Universe 🌌"]
+  },
+  {
+    question: "Will you be my Valentine forever? 💍",
+    answers: ["YES ❤️", "YES FOREVER 💕"]
+  }
 ];
 
-function nextQuestion() {
-  if (currentQuestion < questions.length) {
-    const q = questions[currentQuestion];
-    document.getElementById("question").innerText = q.question;
+function loadQuestion() {
+  const q = questions[currentQuestion];
+  document.getElementById("question").innerText = q.question;
 
-    let buttonsHTML = "";
-    q.answers.forEach(answer => {
-      buttonsHTML += `<button onclick="handleAnswer()">${answer}</button>`;
-    });
+  let buttonsHTML = "";
+  q.answers.forEach(answer => {
+    buttonsHTML += `<button onclick="nextQuestion()">${answer}</button>`;
+  });
 
-    document.getElementById("answers").innerHTML = buttonsHTML;
-    currentQuestion++;
-  }
+  document.getElementById("answers").innerHTML = buttonsHTML;
 }
 
-function handleAnswer() {
-  if (currentQuestion === questions.length) {
-
+function nextQuestion() {
+  if (currentQuestion === questions.length - 1) {
     confetti({
       particleCount: 200,
       spread: 120,
@@ -64,13 +77,13 @@ function handleAnswer() {
     setTimeout(() => {
       window.location.href = "home.html";
     }, 2000);
-
   } else {
-    nextQuestion();
+    currentQuestion++;
+    loadQuestion();
   }
 }
 
-// FLOATING HEARTS
+// Floating hearts
 function createHearts() {
   const heart = document.createElement("div");
   heart.classList.add("heart");
@@ -84,3 +97,5 @@ function createHearts() {
   }, 6000);
 }
 setInterval(createHearts, 300);
+
+loadQuestion();
