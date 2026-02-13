@@ -102,5 +102,54 @@
   </div>
 
 </section>
+  <script>
+const cards = document.querySelectorAll(".card");
+const generatedMessage = document.getElementById("generatedMessage");
+const confirmBox = document.getElementById("confirmBox");
+const finalLine = document.getElementById("finalLine");
+const promiseBtn = document.getElementById("promiseBtn");
+
+let selected = [];
+
+cards.forEach(card => {
+  card.addEventListener("click", () => {
+
+    const value = card.getAttribute("data-value");
+
+    if (card.classList.contains("active")) {
+      card.classList.remove("active");
+      selected = selected.filter(item => item !== value);
+    } else {
+      card.classList.add("active");
+      selected.push(value);
+    }
+
+    updateMessage();
+  });
+});
+
+function updateMessage() {
+  if (selected.length > 0) {
+
+    const formatted = selected.join(", ");
+
+    generatedMessage.innerHTML =
+      "So basically…<br>You are my " +
+      formatted +
+      ".<br>And that’s why this matters.";
+
+    confirmBox.style.display = "block";
+    promiseBtn.style.display = "block";
+  } else {
+    generatedMessage.innerHTML = "";
+    confirmBox.style.display = "none";
+    promiseBtn.style.display = "none";
+  }
+}
+
+function revealFinal() {
+  finalLine.innerHTML = "You are my everything.";
+}
+</script>
 </body>
 </html>
