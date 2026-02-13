@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>From a Hello… to Forever ❤️</title>
+  <title>Our Story ❤️</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -9,44 +9,28 @@
 <body>
 
 <!-- FIRST SCREEN -->
-<section class="hero-screen">
-  <div class="overlay"></div>
-
-  <div class="hero-content">
+<section class="hero hero-one">
+  <div class="hero-top-text">
     <h1>From a Hello… to Forever</h1>
     <p>Some stories are written by destiny.</p>
   </div>
 
-  <div class="bottom-button">
-    <button onclick="scrollToNext()">Where It All Started ✨</button>
+  <div class="hero-bottom">
+    <a href="#second" class="btn">Where It All Started ✨</a>
   </div>
 </section>
 
-
 <!-- SECOND SCREEN -->
-<section id="second-screen" class="second-screen">
-  <div class="overlay"></div>
-
-  <div class="second-content">
+<section id="second" class="hero hero-two">
+  <div class="hero-top-text">
     <h2>
       It started with a simple hello.<br><br>
-
       No big promises. No dramatic music.<br><br>
-
       Just two people who didn’t know<br>
       they were about to become each other’s favorite person.
     </h2>
   </div>
 </section>
-
-
-<script>
-function scrollToNext() {
-  document.getElementById("second-screen").scrollIntoView({
-    behavior: "smooth"
-  });
-}
-</script>
 
 </body>
 </html>
