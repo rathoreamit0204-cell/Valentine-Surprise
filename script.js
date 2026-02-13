@@ -92,3 +92,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+function showFinal() {
+  document.getElementById("confirmation").style.display = "none";
+  document.getElementById("final-screen").classList.remove("hidden");
+
+  window.scrollTo({
+    top: document.getElementById("final-screen").offsetTop,
+    behavior: "smooth"
+  });
+}
