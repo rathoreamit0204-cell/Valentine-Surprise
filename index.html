@@ -7,31 +7,31 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 
-<body class="banner-bg">
+<body class="index-bg">
 
 <div class="hearts"></div>
 
 <audio id="bgMusic" src="music.mp3" loop></audio>
 
 <!-- PASSWORD SCREEN -->
-<div id="passwordScreen" class="center">
+<div id="passwordScreen" class="password-wrapper">
   <h2>Enter Our Secret Password 🔐</h2>
   <input type="password" id="passwordInput" placeholder="Our Special Date">
   <button onclick="checkPassword()">Unlock 💖</button>
 </div>
 
-<!-- MAIN QUESTION CONTENT -->
+<!-- MAIN CONTENT -->
 <div id="mainContent" style="display:none;">
 
-  <!-- Countdown -->
-  <div class="countdown-wrapper">
+  <div class="countdown">
     <h3>Countdown to Valentine's Day ⏳</h3>
     <p id="timer"></p>
   </div>
 
-  <!-- Question -->
-  <h1 id="question"></h1>
-  <div id="answers"></div>
+  <div class="question-wrapper">
+    <h1 id="question"></h1>
+    <div id="answers"></div>
+  </div>
 
 </div>
 
