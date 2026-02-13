@@ -7,6 +7,7 @@
 </head>
 <body>
 
+<!-- SECTION 1 -->
 <section class="section section-one">
   <div class="overlay"></div>
 
@@ -20,6 +21,7 @@
   </div>
 </section>
 
+<!-- SECTION 2 -->
 <section id="second" class="section section-two">
   <div class="overlay"></div>
 
@@ -33,10 +35,8 @@
   </div>
 </section>
 
-  <!-- SECTION 3 – You Are My -->
-
+<!-- SECTION 3 -->
 <section id="section3" class="section section-three">
-
   <div class="overlay"></div>
 
   <div class="top-text">
@@ -45,43 +45,35 @@
 
   <div class="cards-container">
 
-    <div class="card" data-value="home">
-      🏡 Home
+    <div class="card" data-value="home">🏡 Home
       <p class="message">Because no matter where I am… I feel complete with you.</p>
     </div>
 
-    <div class="card" data-value="peace">
-      🌙 Peace
+    <div class="card" data-value="peace">🌙 Peace
       <p class="message">You calm storms I don’t even talk about.</p>
     </div>
 
-    <div class="card" data-value="strength">
-      🔥 Strength
+    <div class="card" data-value="strength">🔥 Strength
       <p class="message">You make me want to become a better man.</p>
     </div>
 
-    <div class="card" data-value="favorite person">
-      💫 Favorite Person
+    <div class="card" data-value="favorite person">💫 Favorite Person
       <p class="message">The first one I want to tell everything to.</p>
     </div>
 
-    <div class="card" data-value="future">
-      🌍 Future
+    <div class="card" data-value="future">🌍 Future
       <p class="message">I don’t imagine tomorrow without you in it.</p>
     </div>
 
-    <div class="card" data-value="safe place">
-      ❤️ Safe Place
+    <div class="card" data-value="safe place">❤️ Safe Place
       <p class="message">Where my guard drops and my heart stays.</p>
     </div>
 
-    <div class="card" data-value="happiness">
-      😌 Happiness
+    <div class="card" data-value="happiness">😌 Happiness
       <p class="message">My mood changes when your name pops up.</p>
     </div>
 
-    <div class="card" data-value="forever">
-      💍 Forever
+    <div class="card" data-value="forever">💍 Forever
       <p class="message">Not temporary. Not seasonal. Always.</p>
     </div>
 
@@ -89,36 +81,32 @@
 
   <div class="generated-message" id="generatedMessage"></div>
 
-  <div id="confirmationSection" class="confirmation">
+  <!-- CONFIRMATION -->
+  <div id="confirmationSection" class="confirmation" style="display:none;">
+    <h2>Are you sure that’s all you are?</h2>
 
-  <h2 id="confirmQuestion">
-    Are you sure that’s all you are?
-  </h2>
-
-  <div class="confirm-buttons">
-    <button onclick="revealFinal()">Yes</button>
-    <button onclick="revealFinal()">No</button>
-  </div>
-
-  <div id="finalMessage" class="hidden">
-    <h1>You are my everything.</h1>
-    <a href="promise.html" class="primary-btn">✨ Go To Promises</a>
-  </div>
-
-</div>
-  <div class="final-line" id="finalLine"></div>
-
-  <div class="bottom-button" id="promiseBtn" style="display:none;">
-    <a href="promise.html"><button>✨ Go To Promises</button></a>
+    <div class="confirm-buttons">
+      <button onclick="goToFinal()">Yes</button>
+      <button>No</button>
+    </div>
   </div>
 
 </section>
-  <script>
+
+<!-- FINAL FULL SCREEN SECTION -->
+<section id="finalScreen" class="section final-section" style="display:none;">
+  <div class="overlay"></div>
+  <div class="center-text">
+    <h1>You are my everything.</h1>
+    <a href="promise.html"><button>✨ Go To Promises</button></a>
+  </div>
+</section>
+
+<script>
+
 const cards = document.querySelectorAll(".card");
 const generatedMessage = document.getElementById("generatedMessage");
-const confirmBox = document.getElementById("confirmBox");
-const finalLine = document.getElementById("finalLine");
-const promiseBtn = document.getElementById("promiseBtn");
+const confirmationSection = document.getElementById("confirmationSection");
 
 let selected = [];
 
@@ -140,6 +128,7 @@ cards.forEach(card => {
 });
 
 function updateMessage() {
+
   if (selected.length > 0) {
 
     const formatted = selected.join(", ");
@@ -149,18 +138,28 @@ function updateMessage() {
       formatted +
       ".<br>And that’s why this matters.";
 
-    confirmBox.style.display = "block";
-    promiseBtn.style.display = "block";
+    confirmationSection.style.display = "block";
+
   } else {
+
     generatedMessage.innerHTML = "";
-    confirmBox.style.display = "none";
-    promiseBtn.style.display = "none";
+    confirmationSection.style.display = "none";
+
   }
 }
 
-function revealFinal() {
-  finalLine.innerHTML = "You are my everything.";
+function goToFinal() {
+
+  document.getElementById("section3").style.display = "none";
+  document.getElementById("finalScreen").style.display = "flex";
+
+  window.scrollTo({
+    top: document.getElementById("finalScreen").offsetTop,
+    behavior: "smooth"
+  });
 }
+
 </script>
+
 </body>
 </html>
