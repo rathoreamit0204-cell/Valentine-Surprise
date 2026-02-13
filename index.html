@@ -3,31 +3,29 @@
 <head>
   <title>Only For You ❤️</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
+
 <body class="banner-bg">
 
 <div class="hearts"></div>
 
 <audio id="bgMusic" src="music.mp3" loop></audio>
 
-<!-- PASSWORD SCREEN -->
 <div id="passwordScreen" class="center">
   <h2>Enter Our Secret Password 🔐</h2>
   <input type="password" id="passwordInput" placeholder="Our Special Date">
-  <button onclick="checkPassword()">Unlock ❤️</button>
+  <button onclick="checkPassword()">Unlock 💖</button>
 </div>
 
-<!-- MAIN CONTENT -->
 <div id="mainContent" style="display:none;">
 
-  <h3>Countdown to Valentine's Day ⏳</h3>
+  <h3 class="countdown-title">Countdown to Valentine's Day ⏳</h3>
   <p id="timer"></p>
 
-  <h1 id="question">Ready for something special? 💌</h1>
-  <div id="answers">
-    <button onclick="nextQuestion()">Start ❤️</button>
-  </div>
+  <h1 id="question"></h1>
+  <div id="answers"></div>
 
 </div>
 
