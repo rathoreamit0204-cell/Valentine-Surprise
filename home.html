@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Our Love ❤️</title>
+  <title>From a Hello… to Forever ❤️</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<nav>
-  <a href="home.html">Home</a>
-  <a href="what-you-are.html">What You Are</a>
-  <a href="promise.html">Promises</a>
-</nav>
-
-<section class="hero">
-  <video autoplay muted loop>
-    <source src="hero.mp4" type="video/mp4">
-  </video>
-  <div class="hero-text">
-    <h1>You Are My Forever ❤️</h1>
+<section class="hero-home">
+  <div class="hero-content">
+    <h1>From a Hello… to Forever.</h1>
+    <p>Some stories are written by destiny. Ours was written by choice.</p>
+    <button onclick="scrollToSection()">Welcome to our Universe ✨</button>
   </div>
 </section>
+
+<section id="beginning" class="beginning-section">
+  <div>
+    <h2>The Beginning of Us</h2>
+    <h4>Where It All Started</h4>
+    <p>
+      It started with a simple hello. <br><br>
+      No big promises. No dramatic music. <br><br>
+      Just two people who didn’t know <br>
+      they were about to become each other’s favorite person.
+    </p>
+    <img src="img1.jpg" class="small-photo">
+  </div>
+</section>
+
+<script>
+function scrollToSection() {
+  document.getElementById("beginning").scrollIntoView({ behavior: "smooth" });
+}
+</script>
 
 </body>
 </html>
