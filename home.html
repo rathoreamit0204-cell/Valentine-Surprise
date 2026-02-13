@@ -8,39 +8,43 @@
 
 <body>
 
-<section class="hero-home">
+<!-- FIRST SCREEN -->
+<section class="hero-screen">
+  <div class="overlay"></div>
 
   <div class="hero-content">
-
-    <img src="home-banner.jpg" class="hero-image">
-
-    <h1>From a Hello… to Forever.</h1>
-
-    <p>Some stories are written by destiny. Ours was written by choice.</p>
-
-    <button onclick="scrollToSection()">Welcome to our Universe ✨</button>
-
+    <h1>From a Hello… to Forever</h1>
+    <p>Some stories are written by destiny.</p>
   </div>
 
+  <div class="bottom-button">
+    <button onclick="scrollToNext()">Where It All Started ✨</button>
+  </div>
 </section>
 
-<section id="beginning" class="beginning-section">
-  <div>
-    <h2>The Beginning of Us</h2>
-    <h4>Where It All Started</h4>
-    <p>
-      It started with a simple hello. <br><br>
-      No big promises. No dramatic music. <br><br>
-      Just two people who didn’t know <br>
+
+<!-- SECOND SCREEN -->
+<section id="second-screen" class="second-screen">
+  <div class="overlay"></div>
+
+  <div class="second-content">
+    <h2>
+      It started with a simple hello.<br><br>
+
+      No big promises. No dramatic music.<br><br>
+
+      Just two people who didn’t know<br>
       they were about to become each other’s favorite person.
-    </p>
-    <img src="imgg.jpg" class="small-photo">
+    </h2>
   </div>
 </section>
+
 
 <script>
-function scrollToSection() {
-  document.getElementById("beginning").scrollIntoView({ behavior: "smooth" });
+function scrollToNext() {
+  document.getElementById("second-screen").scrollIntoView({
+    behavior: "smooth"
+  });
 }
 </script>
 
