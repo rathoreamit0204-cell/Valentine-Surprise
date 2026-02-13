@@ -13,22 +13,28 @@
 
 <audio id="bgMusic" src="music.mp3" loop></audio>
 
+<!-- PASSWORD SCREEN -->
 <div id="passwordScreen" class="center">
   <h2>Enter Our Secret Password 🔐</h2>
   <input type="password" id="passwordInput" placeholder="Our Special Date">
   <button onclick="checkPassword()">Unlock 💖</button>
 </div>
 
+<!-- MAIN QUESTION CONTENT -->
 <div id="mainContent" style="display:none;">
 
-  <h3 class="countdown-title">Countdown to Valentine's Day ⏳</h3>
-  <p id="timer"></p>
+  <!-- Countdown -->
+  <div class="countdown-wrapper">
+    <h3>Countdown to Valentine's Day ⏳</h3>
+    <p id="timer"></p>
+  </div>
 
+  <!-- Question -->
   <h1 id="question"></h1>
   <div id="answers"></div>
 
 </div>
 
 <script src="script.js"></script>
-<body class="banner-bg">
+</body>
 </html>
